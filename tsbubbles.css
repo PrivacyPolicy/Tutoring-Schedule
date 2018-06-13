@@ -1,0 +1,298 @@
+/* Styles for bubbles in general */
+.bubbleWrap {
+    left: 50%; top: 50%;
+    width: 17%;
+    padding-bottom: 17%;
+    border-radius: 50%;
+    position: fixed;
+    color: black;
+    font-size: 3.5vw;
+    transition: 0.3s, transform .4s, z-index .4s;
+    transition-delay: 0s;
+    z-index: 10;
+}
+.bubbleWrap .bubble {
+    transition: transform .4s, box-shadow .4s;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, .7);
+    
+    /*background: radial-gradient(circle at bottom, #81e8f6, #76deef 10%, #055194 80%, #062745 100%) !important;*/
+    /*background: url(shinysphere.png);
+    background-position: center;
+    background-size: 110%;
+    background-repeat: no-repeat;*/
+}
+/*.bubbleWrap .bubble:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    bagckground: radial-gradient(circle at top, white, rgba(255, 255, 255, 0) 58%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transform: rotate(-30deg);
+}*/
+.bubbleWrap .bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 14px 14px 30px rgba(0, 0, 0, .7);
+}
+.bubbleWrap .bubble div {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5vw;
+}
+.bubbleWrap:active {
+    transform: scale(.8);
+}
+.bubbleWrap a {
+    pointer-events: all;
+}
+
+
+
+
+
+/* when a bubble is supposed to be upfront */
+.bubbleWrap.upfront {
+    transform: scale(13) !important;
+    color: transparent;
+    transition: .5s, color .2s;
+    font-size: 5%;
+    transition-delay: 0.1s;
+    z-index: 30;
+    /*animation: none;*/
+}
+.bubbleWrap.upfront > a > div > div {
+    transition: .3s;
+    opacity: 0;
+}
+.bubbleWrap.upfront a {
+    cursor: default;
+}
+
+
+
+
+
+
+
+/* Specific positions and colors for subject bubbles */
+#subject1 {
+    width: 23%;
+    padding-bottom: 23%;
+    /*background: rgb(255, 34, 33);*/
+    transform: translate(-500%, 500%);
+    z-index: 5;
+}
+#content.subjects #subject1 {
+    transform: translate(-164.5%, 0.5%); }
+
+#subject1 .bubble {
+    background: radial-gradient(circle at 60% 62%, red 47%, rgb(255,100,100) 72%);
+}
+
+
+#subject2 {
+    width: 24%;
+    padding-bottom: 24%;
+    /*background: rgb(34, 255, 33);*/
+    transform: translate(-500%, -50%);
+    z-index: 6;
+}
+#content.subjects #subject2 {
+    transform: translate(-197.5%, -75%); }
+#subject2 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(34, 255, 33) 47%, rgb(154, 255, 153) 72%);
+}
+
+
+#subject3 {
+    width: 25%;
+    padding-bottom: 25%;
+    /*background: rgb(244, 124, 0);*/
+    transform: translate(-500%, -250%);
+    z-index: 3;
+}
+#content.subjects #subject3 {
+    transform: translate(-92.5%, -69.5%); }
+
+#subject3 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(244, 124, 0) 47%, rgb(255, 134, 90) 72%);
+}
+
+
+#subject4 {
+    width: 21%;
+    padding-bottom: 21%;
+    /*background: rgb(138, 43, 226);*/
+    transform: translate(500%, 200%);
+    z-index: 2;
+}
+#content.subjects #subject4 {
+    transform: translate(-12%, -11.5%); }
+
+#subject4 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(138, 43, 226) 47%, rgb(178, 83, 255) 72%);
+}
+
+
+#subject5 {
+    width: 22%;
+    padding-bottom: 22%;
+    /*background: rgb(255, 255, 34);*/
+    transform: translate(500%, -220%);
+    z-index: 1;
+}
+#content.subjects #subject5 {
+    transform: translate(52.5%, -57.5%); }
+
+#subject5 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(255, 255, 34) 47%, rgb(255, 255, 134) 72%);
+}
+
+
+#subject6 {
+    width: 18%;
+    padding-bottom: 18%;
+    /*background: rgb(175, 175, 175);*/
+    transform: translate(500%, 500%);
+    z-index: 4;
+}
+#content.subjects #subject6 {
+    transform: translate(-100%, 32%); }
+
+#subject6 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(10, 80, 223) 47%, rgba(0,130,255,1) 72%);
+}
+
+
+#subject7 {
+    width: 18%;
+    padding-bottom: 18%;
+    /*background: rgb(175, 175, 175);*/
+    transform: translate(500%, 500%)
+}
+#content.subjects #subject7 {
+    transform: translate(170%, 37%) }
+
+#subject7 .bubble {
+    background: radial-gradient(circle at 60% 62%, rgb(175, 175, 175) 47%, rgb(205, 205, 205) 72%);
+}
+
+
+
+
+/* Specific course bubble properties */
+#courses .bubbleWrap {
+    width: 27%;
+    padding-bottom: 27%;
+    transition: 0.3s, opacity 0.3s;
+    transition-delay: 0s;
+    opacity: 0;
+}
+#courses .bubbleWrap .bubble {
+    background: rgba(255, 255, 255, .7);
+}
+#courses .bubbleWrap.upfront .bubble {
+    border-radius: 5px;
+}
+#courses .bubbleWrap.upfront .bubble:hover {
+    transform: none;
+}
+
+#content #courses .bubbleWrap a {
+    pointer-events: none;
+}
+#content.courses #courses .bubbleWrap a {
+    pointer-events: all;
+}
+
+#content.courses #courses .bubbleWrap {
+    transition-delay: .2s, .5s;
+    opacity: 1;
+}
+#content.courses #courses .bubbleWrap:hover {
+    transition-delay: 0s;
+}
+#courses .bubbleWrap.upfront {
+    transform: translate(0, -50%) !important;
+    left: 1%; top: 50%;
+    width: 98%;
+    padding-bottom: 45%;
+    opacity: 1;
+}
+#courses .bubbleWrap.upfront .bubble {
+    box-shadow: none;
+}
+
+#courses .bubbleWrap .bubble {
+    transition: .4s, border-radius .4s;
+    transition-delay: 0.2s;
+}
+#courses .bubbleWrap.upfront .bubble {
+    transition-delay: .1s, 0s;
+}
+
+/* Subject positions four differing #s of classes */
+#courses.one #course1   { transform: translate(-50%, -50%); )}
+#courses.one #course2   { transform: translate(-500%, 0); }
+#courses.one #course3   { transform: translate(-500%, 0); }
+#courses.one #course4   { transform: translate(-500%, 0); }
+
+#courses.two #course1   { transform: translate(-125%, -50%); }
+#courses.two #course2   { transform: translate(25%, -50%); }
+#courses.two #course3   { transform: translate(-500%, 0); }
+#courses.two #course4   { transform: translate(-500%, 0); }
+
+#courses.three #course1 { transform: translate(-50%, -80%); }
+#courses.three #course2 { transform: translate(-130%, -5%); }
+#courses.three #course3 { transform: translate(30%, -5%); }
+#courses.three #course4 { transform: translate(-500%, 0); }
+
+#courses.four #course1  { transform: translate(-142%, -82%) }
+#courses.four #course2  { transform: translate(-74%, 6%) }
+#courses.four #course3  { transform: translate(-7%, -82%) }
+#courses.four #course4  { transform: translate(61%, 6%) }
+
+
+
+
+
+/*.bubble:not(.upfront) {
+    animation: bubbleScale infinite forwards 1s;
+    animaion-play-state: running;
+}
+.bubble:not(.upfront):hover {
+    animaion-play-state: paused;
+    animation-iteration-count: 0;
+    transform:scale(50);
+}
+/-*#subject1 .bubble { animation-duration: 10s; animation-delay: 1s; }
+#subject2 .bubble { animation-duration: 11s; animation-delay: 5s; }
+#subject3 .bubble { animation-duration: 9s; animation-delay: 2s; }
+#subject4 .bubble { animation-duration: 8s; animation-delay: 7s; }
+#subject5 .bubble { animation-duration: 8.6s; animation-delay: 2s; }
+#subject6 .bubble { animation-duration: 10.5s; animation-delay: 5s; }
+#subject7 .bubble { animation-duration: 12s; animation-delay: 1s; }*-/
+
+/-* Animations *-/
+@keyframes bubbleScale {
+    from {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-3%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}*/
+
+

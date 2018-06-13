@@ -1,0 +1,91 @@
+/* Animations mainly for the bubbles */
+@keyframes bubbles {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    15% {
+        transform: translate(-2%, 1%) scale(1.01);
+    }
+    30% {
+        transform: translate(2%, -1%) scale(1);
+    }
+    45% {
+        transform: translate(1%, 1%) scale(1.01);
+    }
+    60% {
+        transform: translate(-2%, 1%) scale(1.01);
+    }
+    85% {
+        transform: translate(2%, -1%) scale(1);
+    }
+    90% {
+        transform: translate(.5%, .5%) scale(1.01);
+    }
+    to {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+@keyframes bubbles2 {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    15% {
+        transform: translate(1.5%, -1%) scale(1.01);
+    }
+    30% {
+        transform: translate(2%, -.5%) scale(1);
+    }
+    45% {
+        transform: translate(2%, 1%) scale(1.01);
+    }
+    60% {
+        transform: translate(1%, 0%) scale(1.01);
+    }
+    85% {
+        transform: translate(1%, -1%) scale(1);
+    }
+    90% {
+        transform: translate(-.5%, .5%) scale(1.01);
+    }
+    to {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+
+/*.bubbleWrap {
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#subject1 {
+    animation-name: bubbles;
+    animation-delay: 7s;
+}
+#subject2 {
+    animation-name: bubbles2;
+    animation-delay: 6s;
+}
+#subject3 {
+    animation-name: bubbles;
+    animation-delay: 4s;
+}
+#subject4 {
+    animation-name: bubbles2;
+    animation-delay: 5s;
+}
+#subject5 {
+    animation-name: bubbles;
+    animation-delay: 3s;
+}
+#subject6 {
+    animation-name: bubbles2;
+    animation-delay: 2s;
+}
+#subject7 {
+    animation-name: bubbles;
+    animation-delay: 0s;
+}*/

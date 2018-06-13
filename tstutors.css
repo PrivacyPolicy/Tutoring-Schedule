@@ -1,0 +1,200 @@
+#tutors {
+    overflow-y: auto;
+}
+
+#tutors #tutorList.hide {
+    overflow: hidden;
+}
+
+#tutors #tutorList {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    padding-top: 10%;
+    overflow-y: auto;
+    transform: translateX(-5%);
+    
+    transition: opacity .3s, transform .3s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+}
+#content.tutors #tutors #tutorList {
+    transition: opacity 1s, transform 1s;
+    transform: none;
+    
+    transition-delay: .2s;
+    opacity: 1;
+}
+
+#tutors a {
+    cursor: default;
+}
+#content.tutors #tutors a {
+    cursor: auto;
+}
+
+#tutors a.tutor {
+    display: inline-block;
+    margin: 7px;
+    color: blue;
+}
+#tutors a:visited {
+    color: default;
+}
+#tutors .tutor {
+    height: 55px;
+    position: relative;
+}
+#tutors .tutor> div:first-child {
+    width: 55px; height: 55px;
+    background-color: black;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    float: left;
+}
+#tutors .tutor>div:last-child {
+    position: absolute;
+    left: 65px; top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+#tutors .tutor>div>span {
+    font-size: 55px;
+    color: white;
+    text-shadow: 0 0 3px white;
+    position: absolute;
+    left: 11.5px;
+    top: -3px;
+}
+#tutors #add>div:last-child {
+    text-decoration: underline;
+}
+
+#tutors .bubbleWrap {
+    width: 7%;
+    padding-bottom: 7%;
+    position: absolute;
+    left: 23%;
+    z-index: 34;
+}
+#tutors .bubbleWrap:nth-child(even) {
+    left: 61%;
+}
+#tutors .bubbleWrap .bubble>div {
+    left: 110%;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    white-space: nowrap;
+    pointer-events: none;
+    
+    transition: opacity .3s, visibility .3s;
+    visibility: visible;
+    opacity: 1;
+}
+#content.tutors #tutors .bubbleWrap .bubble>div {
+    pointer-events: default;
+}
+#tutors .bubbleWrap.upfront .bubble>div {
+    opacity: 0;]
+}
+#tutors .bubbleWrap.upfront .bubble {
+    cursor: default;
+}
+
+#tutors #tutorList.hide .bubbleWrap.upfront {
+    z-index: 35;
+    color: black;
+    transform: scale(1.5) !important;
+    opacity: 1;
+    left: 10% !important;
+    top: 11.1% !important;
+    visibility: visible;
+}
+#tutors #tutorList.hide .bubbleWrap {
+    visibility: hidden;
+    opacity: 0;
+    cursor: default;
+}
+#tutors #tutorList.hide .bubbleWrap .bubble>div {
+    cursor: default;
+}
+
+#tutors #tutorList .bubble {
+    background-color: black;
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+#tutors #tutorList .bubble:hover {
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, .7);
+}
+#tutors #tutorList.hide .bubble:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, .7);
+    transform: none;
+}
+
+/* Details that hide till needed */
+#tutorList #tutorDetails {
+    position: absolute;
+    left: 0; top: 10%; bottom: 0; right: 0;
+    z-index: 31;
+    
+    transition: visibility .3s, opacity .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+#tutorList.hide #tutorDetails {
+    transition-delay: .5s, .5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#tutors #dumbySpacer {
+    position: absolute;
+    width: 1px; height: 1px;
+}
+#tutorList.hide #dumbySpacer {
+    /*height: 0;*/
+}
+
+
+/* SCHEDULE VIEW IN TUTORS??? *GASPH*/
+#tutors .scheduleView {
+    opacity: 1;
+    padding-bottom: 39%;
+    top: 58%;
+    width: 92%;
+    left: 4%;
+}
+
+#tutors #tutorCourses {
+    font-size: 2vw;
+    background: black;
+    width: 50%;
+    float: right;
+    padding: 1%;
+    border-radius: 5px 0 0 5px;
+    position: relative;
+}
+
+
+div.box > span {
+    font-size: 1.2vw;
+    position: absolute;
+    right: 0;
+    margin: 2%;
+    color: white;
+}
+
+
+/*#tutor57 .bubble {
+    animation: XinItUpInHere 1s infinite;
+}
+@keyframes XinItUpInHere {
+    from {transform: rotate(0deg) scale(1);}
+    25% {transform: rotate(90deg) scale(1.3);}
+    50% {transform: rotate(180deg) scale(1);}
+    75% {transform: rotate(270deg) scale(1.2);}
+    to {transform: rotate(360deg) scale(1);}
+}*/

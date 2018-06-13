@@ -1,0 +1,157 @@
+/* The detailed styles of the schedule view */
+
+.scheduleView {
+    transform: translate(0, -50%);
+    left: 50%; top: 50%;
+    left: 1%;
+    width: 98%;
+    padding-bottom: 45%;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
+    transition-delay: 0;
+    z-index: 39;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .7);
+}
+
+#content.schedule .scheduleView {
+    opacity: 1;
+    transition-delay: .3s;
+}
+
+.scheduleView>div {
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+}
+
+
+
+/* INSIDE the view */
+
+.scheduleView>div>table { /* Mon-Sun row */
+    background: white;
+    position: absolute;
+    top: 0; left: 0;
+    height: 8%; width: 100%;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid black;
+    z-index: 2;
+}
+.scheduleView>div>table td:first-child {
+    width: 10%;
+}
+.scheduleView>div>table td {
+    width: 15%;
+    font-size: 2vw;
+}
+
+.scheduleView .scheduleContent {
+    left: 0; right: 0;
+    bottom: 0; top: 8%;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    /*overflow-x: hidden;
+    overflow-y: auto;*/
+    bottom: calc(55% / 1.5);
+}
+
+.scheduleView .lines span {
+    position: absolute;
+    z-index: 3;
+}
+.scheduleView .vertLines span {
+    background: black;
+    width: 1px;
+    height: 100%;
+}
+.scheduleView .vertLines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.vertLines span:nth-child(1) { left: 10%; }
+.vertLines span:nth-child(2) { left: 25%; }
+.vertLines span:nth-child(3) { left: 40%; }
+.vertLines span:nth-child(4) { left: 55%; }
+.vertLines span:nth-child(5) { left: 70%; }
+.vertLines span:nth-child(6) { left: 85%; }
+
+
+.scheduleView .horizLines {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.scheduleView .horizLines span {
+    background: grey;
+    height: 1px;
+    width: 91%;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 9%;
+}
+.horizLines span:nth-child(1), .times span:nth-child(1) {top:10%;}
+.horizLines span:nth-child(2), .times span:nth-child(2) {top:25%;}
+.horizLines span:nth-child(3), .times span:nth-child(3) {top:40%;}
+.horizLines span:nth-child(4), .times span:nth-child(4) {top:55%;}
+.horizLines span:nth-child(5), .times span:nth-child(5) {top:70%;}
+.horizLines span:nth-child(6), .times span:nth-child(6) {top:85%;}
+.horizLines span:nth-child(7), .times span:nth-child(7) {top:100%;}
+.horizLines span:nth-child(8), .times span:nth-child(8) {top:115%;}
+.horizLines span:nth-child(9), .times span:nth-child(9) {top:130%;}
+.horizLines span:nth-child(10),.times span:nth-child(10){top:145%;}
+.horizLines span:nth-child(11),.times span:nth-child(11){top:160%;}
+
+.scheduleView .times {
+    height: 100%;
+    position: absolute;
+    width: 8%;
+}
+.scheduleView .times span {
+    position: absolute;
+    display: block;
+    font-size: 1.5vw;
+    width: 100%;
+    text-align: right;
+    transform: translateY(-50%);
+}
+
+
+/* Boxes that show what classes are provided when */
+div.box {
+    position: absolute;
+    background: rgb(20, 51, 255);
+    width: 15%;
+    
+    top: 25%;
+    height: 15%;
+    left: -50%;
+    /*
+    Width: 15%
+    Left, Top: 10% + ( 15% * (n - 1) )
+    Height: 15% * n  +  15% / 2 * m     m = 1 if half hour, 0 if not
+    */
+}
+
+div.box.monday    { left: 10%; }
+div.box.tuesday   { left: 25%; }
+div.box.wednesday { left: 40%; }
+div.box.thursday  { left: 55%; }
+div.box.friday    { left: 70%; }
+div.box.sunday    { left: 85%; }
+div.box.monday, div.box.wednesday, div.box.friday {
+    background: rgb(35, 62, 255);
+}
+
+
+
+
+
+
+
+
